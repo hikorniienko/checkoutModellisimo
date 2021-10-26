@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="/checkout.min.css">
+  </head>
+  <body>
+
+    <form style="display:none" id="order-form" method="POST" action="" onsubmit="if(_shopLockButtons()) return false; _shopFadeControl('order-table');_uPostForm('order-form'); return false;">
+    						<input type="hidden" name="mode" value="recalc">
+    						<input type="hidden" name="ssid" value="JBtwgjNi">
+    						<div id="order-table" class="u-orders-wrapper"><table>
+    					<thead>
+    					<tr class="order-head">
+    						<th class="order-item-nom" width="1%">№</th><th class="order-head-art">Артикул</th><th class="order-head-name">Наименование</th><th class="order-head-weight">Вес</th><th class="order-head-other8">Статус наличия</th><th class="order-head-price" width="1%">Цена</th>
+    					<th class="order-head-cnt nowrap" width="1%">Кол-во</th>
+    					<th class="order-head-sum" width="1%">Сумма</th>
+    					<th class="order-head-del" width="1%">Удалить</th>
+    				</tr></thead><tbody><tr id="order-item-873" class="order-item  warning" title="Заказанное Вами количество товара больше доступного. Уменьшите количество по данной позиции. В наличии 1"><td class="order-item-nom">1.</td><td class="order-item-art">B66960496</td><td class="order-item-name">MERCEDES-MAYBACH W167 GLS 600 2021 RED METALLIC *BENZ BENC МЕРСЕДЕС БЕНС МЕРСИДЕС МЕРСЕДЕЗ БЕНЦ МЕРИН МЕРС</td><td class="order-item-weight">1500.00</td><td class="order-item-other8">В наличии</td><td class="order-item-price nowrap">14 800</td>
+    					<td class="order-item-cnt"><input type="text" name="cnt_873" maxlength="5" size="5" value="2"></td>
+    					<td class="order-item-sum nowrap">29 600</td>
+    					<td class="order-item-del" align="center"><input type="checkbox" name="del_873" value="1"></td>
+    				</tr><tr id="order-item-874" class="order-item "><td class="order-item-nom">2.</td><td class="order-item-art">B66960497</td><td class="order-item-name"><a href="/shop/110715/desc/mercedes-maybach-w167-gls-600-2021-black-metallic-benz-benc-mersedes-bens-mersides-mersedez-benc-merin-mers" target="_blank">MERCEDES-MAYBACH W167 GLS 600 2021 BLACK METALLIC *BENZ BENC МЕРСЕДЕС БЕНС МЕРСИДЕС МЕРСЕДЕЗ БЕНЦ МЕРИН МЕРС</a></td><td class="order-item-weight">1500.00</td><td class="order-item-other8">В наличии</td><td class="order-item-price nowrap">16 400</td>
+    					<td class="order-item-cnt"><input type="text" name="cnt_874" maxlength="5" size="5" value="2"></td>
+    					<td class="order-item-sum nowrap">32 800</td>
+    					<td class="order-item-del" align="center"><input type="checkbox" name="del_874" value="1"></td>
+    				</tr><tr>
+    						<td colspan="5"><input type="button" value="Продолжить покупки" onclick="location.href='/shop'" id="order-but-continue"></td>
+    						<td align="right"><input type="submit" value="Пересчитать" id="order-but-recalc"></td>
+    						<td align="right" class="order-total">Итого:</td>
+    						<td colspan="2" class="order-total">62 400</td>
+    					</tr>
+    				</tbody></table></div>
+    					</form>
+
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div class="checkout" id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      var configCheckout = {
+        weight: '3000.00',
+        amount: '10000',
+        // promoId: 19,
+        feedback: feedbackUcoz
+      }
+
+      function feedbackUcoz(data) {
+        console.log(data)
+      }
+    </script>
+  </body>
+</html>
