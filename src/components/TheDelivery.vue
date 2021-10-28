@@ -83,9 +83,7 @@ export default {
         this.delivery.post.show = true;
       }
 
-      if (this.location.code !== '44') {
-        this.delivery.cdekCourier.show = true;
-      }
+      this.delivery.cdekCourier.show = true;
 
       this.delivery.cdekPVZ.show = true;
 
