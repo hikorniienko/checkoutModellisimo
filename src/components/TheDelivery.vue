@@ -128,6 +128,10 @@ export default {
     },
 
     deliveryDetails(data) {
+      if (Boolean(this.config.disableShippingCost) && data.tax !== undefined) {
+        data.tax = 1;
+      }
+
       data.name = this.searchActiveName();
       data.id = this.searchActiveId();
       this.$emit('delivery', data);
