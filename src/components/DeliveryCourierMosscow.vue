@@ -35,16 +35,16 @@ export default {
           price: 700,
           active: false,
         },
-        {
-          title: 'От 10 до 20 км от МКАД',
-          price: 800,
-          active: false,
-        },
-        {
-          title: 'От 20 до 30 км от МКАД',
-          price: 1000,
-          active: false,
-        },
+        // {
+        //   title: 'От 10 до 20 км от МКАД',
+        //   price: 800,
+        //   active: false,
+        // },
+        // {
+        //   title: 'От 20 до 30 км от МКАД',
+        //   price: 1000,
+        //   active: false,
+        // },
       ],
       address: ''
     }

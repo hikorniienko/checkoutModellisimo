@@ -10,6 +10,7 @@
         <the-pay :location="location" :delivery="delivery" @pay="connectPay"></the-pay>
         <the-note  @note="connectNote"></the-note>
         <the-promo></the-promo>
+        <the-rules @rules="connectRules"></the-rules>
 
       </div>
       <div class="checkout__right">
@@ -29,6 +30,7 @@ import TheDelivery from '@/components/TheDelivery.vue';
 import ThePay from '@/components/ThePay.vue';
 import TheNote from '@/components/TheNote.vue';
 import ThePromo from '@/components/ThePromo.vue';
+import TheRules from '@/components/TheRules.vue';
 import TheResult from '@/components/TheResult.vue';
 
 export default {
@@ -42,6 +44,7 @@ export default {
     ThePay,
     TheNote,
     ThePromo,
+    TheRules,
     TheResult
   },
 
@@ -51,7 +54,8 @@ export default {
       details: {},
       delivery: {},
       pay: {},
-      note: ''
+      note: '',
+      rules: {}
     }
   },
 
@@ -74,6 +78,11 @@ export default {
 
     connectNote(data) {
       this.note = data;
+      this.config.feedback(this.$data);
+    },
+
+    connectRules(data) {
+      this.rules = data;
       this.config.feedback(this.$data);
     }
   },
