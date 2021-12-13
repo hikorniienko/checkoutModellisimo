@@ -52,7 +52,8 @@ export default {
         phone: '',
         address: '',
         work_time: '',
-        active: 0
+        active: 0,
+        pvz: ''
       },
       pvz: [],
       pvzSearch: '',
@@ -113,6 +114,7 @@ export default {
       this.view.address = this.pvz[key].location.address_full;
       this.view.work_time = this.pvz[key].work_time;
       this.view.active = key;
+      this.view.pvz = this.pvz[key].code;
     },
 
     returnDetails() {
@@ -121,6 +123,7 @@ export default {
         if (this.tax) details.tax = this.tax;
         if (this.view.address) details.address = this.view.address;
         if (this.days) details.days = this.days;
+        if (this.view.pvz) details.pvz = this.view.pvz;
 
         this.$emit('deliveryDetails', details);
       }
