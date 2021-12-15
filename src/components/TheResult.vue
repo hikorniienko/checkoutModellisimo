@@ -6,7 +6,7 @@
         <span>Город</span> {{  location.city }} <small v-if="location.country !== undefined">({{ location.country.name }})</small>
       </div>
       <div class="checkout__aside--block--item" v-if="details.fio !== undefined">
-        <span>Фио</span> {{ details.fio.name }} {{ details.fio.surname }} {{ details.fio.patronymic }}
+        <span>Фио</span> {{ details.fio.surname }} {{ details.fio.name }} {{ details.fio.patronymic }}
       </div>
       <div class="checkout__aside--block--item" v-if="details.phone !== undefined">
         <span>Телефон</span> {{ details.phone }}

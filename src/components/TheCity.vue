@@ -1,6 +1,7 @@
 <template>
   <div :class="{load: !preloader}" class="checkout__block preloader">
     <h3>Ваш город {{ city }}</h3>
+    <small>Выберите город из списка.</small>
     <input type="text" placeholder="Город" @input="eventCity" :value="city">
     <ul class="cityList" @click="eventCityList">
       <li v-show="item.city.toLowerCase().includes(citySearch)" v-for="item in cityList" :key="item.code" :data-city-code="item.code" :data-city-name="item.city" :data-city-country="item.country" :data-city-country-name="countryList[item.country]">
