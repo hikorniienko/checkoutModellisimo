@@ -51,11 +51,11 @@ export default {
           show: false,
           active: false
         },
-        3:{
-          name: 'Переводом на карту Сбербанка',
-          show: false,
-          active: false
-        },
+        // 3:{
+        //   name: 'Переводом на карту Сбербанка',
+        //   show: false,
+        //   active: false
+        // },
         4:{
           name: 'Счет для юридических лиц',
           show: false,
